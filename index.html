@@ -20,7 +20,8 @@
 <script>
 document.getElementById("cityField").addEventListener("keyup", function(event) {
     event.preventDefault();
-    const url = "http://bioresearch.byu.edu/cs260/jquery/getcity.cgi?q=P";
+    const url = "http://bioresearch.byu.edu/cs260/jquery/getcity.cgi?q="+
+      document.getElementById("cityField").value;
     fetch(url)
         .then(function(response) {
             return response.json();
