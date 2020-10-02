@@ -18,10 +18,11 @@
 </body>
 
 <script>
-document.getElementById("cityField").addEventListener("keyup", function(event) {
-  event.preventDefault();
-  alert( "Handler for .keyup() called." );
-});
+  document.getElementById("cityField").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    document.getElementById("txtHint").innerHTML=
+      document.getElementById("cityField").value;
+  });
 </script>
 
 </html>
